@@ -235,7 +235,7 @@ body {
 .btn-card:hover {
     background-color: var(--accent-hover);
 }
-
+url(https://ms-vscode.gallerycdn.vsassets.io/extensions/ms-vscode/live-server/0.4.20/1786565925425/Microsoft.VisualStudio.Services.Icons.Default)
 /* Boton de WhatsApp */
 .whatsapp-btn {
     position: fixed;
