@@ -1,6 +1,4 @@
-/* style.css */
-
-/* Reset Basico */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -15,10 +13,9 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Variables de Color */
 :root {
     --primary: #111111;
-    --accent: #d4af37; /* Dorado sutil */
+    --accent: #d4af37;
     --accent-hover: #b89628;
     --bg-light: #ffffff;
     --text-muted: #666666;
@@ -135,7 +132,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Seccion Productos */
+/* Sección de Productos */
 .products-section {
     padding: 5rem 5%;
     max-width: 1200px;
@@ -235,8 +232,8 @@ body {
 .btn-card:hover {
     background-color: var(--accent-hover);
 }
-url(https://ms-vscode.gallerycdn.vsassets.io/extensions/ms-vscode/live-server/0.4.20/1786565925425/Microsoft.VisualStudio.Services.Icons.Default)
-/* Boton de WhatsApp */
+
+/* WhatsApp Floating Button */
 .whatsapp-btn {
     position: fixed;
     bottom: 25px;
@@ -292,10 +289,9 @@ footer {
     color: #888888;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Simplificado para CSS puro */
+        display: none;
     }
     
     .hero h1 {
