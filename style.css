@@ -60,10 +60,10 @@ body {
     color: #c5a059;
 }
 
-/* 2. Sección Hero (Portada con la imagen de fondo y el filtro elegante) */
+/* 2. Sección Hero (Portada urbana con fondo de cristales/edificio) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('imagenes/zapato-1.jpeg.jpeg') center/cover no-repeat;
-    height: 65vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/zapato-2.jpeg.jpeg') center/cover no-repeat;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ body {
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .badge {
@@ -91,9 +91,10 @@ body {
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 15px;
     font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero p {
@@ -101,6 +102,7 @@ body {
     margin-bottom: 25px;
     font-weight: 300;
     color: #f1f1f1;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .btn-primary {
