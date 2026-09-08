@@ -1,10 +1,10 @@
-/* --- ESTILOS EXACTOS: ELITE FOOTWEAR --- */
+/* --- ESTILOS COMPLETOS CON PORTADA --- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -13,28 +13,36 @@ body {
     line-height: 1.6;
 }
 
-/* 1. Barra de Navegación Superior */
-header {
+/* 1. Barra de Navegación */
+.navbar {
     background-color: #ffffff;
-    padding: 20px 60px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #111;
     text-transform: uppercase;
 }
 
+.logo span {
+    font-weight: 400;
+    color: #c5a059;
+}
+
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 30px;
     list-style: none;
     font-size: 13px;
     font-weight: 600;
@@ -52,10 +60,72 @@ header {
     color: #c5a059;
 }
 
-/* 2. Título de la Sección ("Modelos Destacados") */
+/* 2. Sección Hero (Portada con la imagen de fondo y filtro) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('imagenes/zapato-1.jpeg.jpeg') center/cover no-repeat;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.badge {
+    background-color: #c5a059;
+    color: white;
+    padding: 6px 14px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-weight: 300;
+    color: #f1f1f1;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #111;
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #c5a059;
+    color: white;
+}
+
+/* 3. Título "Modelos Destacados" */
 .section-title-container {
     text-align: center;
-    margin: 50px 0 35px 0;
+    margin: 50px 0 30px 0;
 }
 
 .section-title {
@@ -63,7 +133,6 @@ header {
     font-size: 30px;
     font-weight: 700;
     color: #1a1a1a;
-    letter-spacing: 0.5px;
 }
 
 .section-divider {
@@ -74,7 +143,7 @@ header {
     border-radius: 2px;
 }
 
-/* 3. Contenedor de Productos en Cuadrícula */
+/* 4. Cuadrícula de Productos */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -83,32 +152,46 @@ header {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* Tarjeta individual de cada zapatilla */
 .product-card {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     border: 1px solid #eaeaea;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Imagen de la tarjeta */
-.product-image {
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
     width: 100%;
-    height: 270px;
-    object-fit: cover;
-    background-color: #f2f2f2;
+    height: 260px;
+    background-color: #f4f4f4;
+    overflow: hidden;
 }
 
-/* Información de la zapatilla */
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
 .product-info {
-    padding: 22px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -125,12 +208,11 @@ header {
 
 .product-title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: #111;
     margin-bottom: 20px;
 }
 
-/* Botón "Consultar por WhatsApp" dentro de la tarjeta */
 .whatsapp-btn {
     margin-top: auto;
     background-color: #111;
@@ -139,7 +221,7 @@ header {
     padding: 12px;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.5px;
     text-align: center;
     text-decoration: none;
@@ -147,23 +229,23 @@ header {
 }
 
 .whatsapp-btn:hover {
-    background-color: #333;
+    background-color: #c5a059;
 }
 
-/* 4. Botón Flotante de WhatsApp (esquina inferior derecha) */
+/* 5. Botón Flotante de WhatsApp */
 .floating-whatsapp {
     position: fixed;
     bottom: 25px;
     right: 25px;
     background-color: #25d366;
     color: white;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 26px;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     z-index: 1000;
     text-decoration: none;
