@@ -1,304 +1,180 @@
-/* Reset Básico */
+/* --- ESTILOS ORIGINALES DE ELITE FOOTWEAR --- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Playfair Display', 'Poppins', serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #2b2b2b;
-    background-color: #f9f9fb;
+    background-color: #fcfcfc;
+    color: #222;
     line-height: 1.6;
-    scroll-behavior: smooth;
 }
 
-:root {
-    --primary: #111111;
-    --accent: #d4af37;
-    --accent-hover: #b89628;
-    --bg-light: #ffffff;
-    --text-muted: #666666;
-}
-
-/* Navbar */
-.navbar {
+/* Cabecera superior y menú de navegación */
+header {
+    background-color: #ffffff;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eaeaea;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
+    font-size: 22px;
     font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--primary);
-}
-
-.logo span {
-    color: var(--accent);
+    letter-spacing: 3px;
+    color: #111;
+    text-transform: uppercase;
 }
 
 .nav-links {
     display: flex;
+    gap: 30px;
     list-style: none;
-    gap: 2rem;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    color: #333;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+    color: #c5a059;
 }
 
-/* Hero Section */
-.hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
-                url('https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Título de sección destacado */
+.section-title-container {
     text-align: center;
-    padding: 0 1rem;
-    margin-top: 60px;
-}
-
-.hero-content {
-    max-width: 800px;
-    color: #ffffff;
-}
-
-.badge {
-    background-color: var(--accent);
-    color: #ffffff;
-    padding: 0.4rem 1.2rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
-}
-
-.btn-primary {
-    display: inline-block;
-    background-color: #ffffff;
-    color: var(--primary);
-    padding: 0.9rem 2.2rem;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--accent);
-    color: #ffffff;
-    transform: translateY(-3px);
-}
-
-/* Sección de Productos */
-.products-section {
-    padding: 5rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px 0 30px 0;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
 }
 
-.section-title::after {
-    content: '';
-    width: 60px;
+.section-divider {
+    width: 40px;
     height: 3px;
-    background-color: var(--accent);
-    display: block;
-    margin: 0.8rem auto 0;
+    background-color: #c5a059;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Contenedor y Cuadrícula de Productos */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 50px 20px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
+/* Tarjeta de producto */
 .product-card {
-    background-color: var(--bg-light);
-    border-radius: 12px;
+    background: #fff;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.card-image {
+/* Imagen del producto */
+.product-image {
     width: 100%;
     height: 280px;
-    overflow: hidden;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    background-color: #f4f4f4;
 }
 
-.product-card:hover .card-image img {
-    transform: scale(1.08);
+/* Información de la tarjeta */
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.card-info {
-    padding: 1.5rem;
-}
-
-.category {
-    font-size: 0.75rem;
+.product-category {
+    font-size: 11px;
+    color: #666;
     text-transform: uppercase;
-    color: var(--text-muted);
     letter-spacing: 1px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
-.card-info h3 {
-    font-size: 1.2rem;
-    margin: 0.4rem 0;
-}
-
-.price {
-    font-size: 1.2rem;
+.product-title {
+    font-size: 18px;
     font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 1.2rem;
+    color: #111;
+    margin-bottom: 20px;
 }
 
-.btn-card {
-    display: block;
-    text-align: center;
-    background-color: var(--primary);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.7rem 0;
+/* Botón de WhatsApp dentro de la tarjeta */
+.whatsapp-btn {
+    margin-top: auto;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 12px;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.btn-card:hover {
-    background-color: var(--accent-hover);
+.whatsapp-btn:hover {
+    background-color: #333;
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-btn {
+/* Botón flotante de WhatsApp (esquina inferior derecha) */
+.floating-whatsapp {
     position: fixed;
     bottom: 25px;
     right: 25px;
+    background-color: #25d366;
+    color: white;
     width: 60px;
     height: 60px;
-    background-color: #25d366;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    font-size: 30px;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-.whatsapp-btn:hover {
+.floating-whatsapp:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-}
-
-.whatsapp-icon {
-    width: 32px;
-    height: 32px;
-    fill: #ffffff;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary);
-    color: #ffffff;
-    padding: 3rem 1rem;
-    text-align: center;
-    margin-top: 4rem;
-}
-
-.footer-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: #888888;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .hero p {
-        font-size: 0.95rem;
-    }
 }
