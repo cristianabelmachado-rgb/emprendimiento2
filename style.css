@@ -37,11 +37,7 @@ body {
     font-weight: 400;
     color: #c5a059;
 }
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('./imagenes/zapato-1.jpeg.jpeg') center/cover no-repeat;
-    height: 65vh;
-    /* ... resto de propiedades ... */
-}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -64,7 +60,7 @@ body {
 
 /* 2. Portada Hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('./imagenes/zapato-1.jpeg.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('./imagenes/portada.jpg') center/cover no-repeat;
     height: 65vh;
     display: flex;
     align-items: center;
