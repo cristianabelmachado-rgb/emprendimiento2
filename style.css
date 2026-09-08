@@ -60,10 +60,10 @@ body {
     color: #c5a059;
 }
 
-/* 2. Sección Hero con la portada de cristales/edificio y el zapato */
+/* 2. Sección Hero (Inicio) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('imagenes/zapato-1.jpeg.jpeg') center/cover no-repeat;
-    height: 65vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('imagenes/zapato-1.jpeg.jpeg') center/cover no-repeat;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
