@@ -1,48 +1,40 @@
-/* --- ESTILOS COMPLETOS ELITE FOOTWEAR --- */
+/* --- ESTILOS EXACTOS: ELITE FOOTWEAR --- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #fcfcfc;
+    background-color: #fafafa;
     color: #222;
     line-height: 1.6;
 }
 
-/* 1. Barra de Navegación */
-.navbar {
+/* 1. Barra de Navegación Superior */
+header {
     background-color: #ffffff;
-    padding: 20px 50px;
+    padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eaeaea;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #111;
     text-transform: uppercase;
 }
 
-.logo span {
-    font-weight: 400;
-    color: #c5a059;
-}
-
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     list-style: none;
     font-size: 13px;
     font-weight: 600;
@@ -60,136 +52,69 @@ body {
     color: #c5a059;
 }
 
-/* 2. Sección Hero (Portada urbana con fondo de cristales/edificio) */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/zapato-2.jpeg.jpeg') center/cover no-repeat;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 2. Título de la Sección ("Modelos Destacados") */
+.section-title-container {
     text-align: center;
-    color: white;
-    padding: 0 20px;
-}
-
-.hero-content {
-    max-width: 750px;
-}
-
-.badge {
-    background-color: #c5a059;
-    color: white;
-    padding: 6px 14px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 20px;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero p {
-    font-size: 15px;
-    margin-bottom: 25px;
-    font-weight: 300;
-    color: #f1f1f1;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-.btn-primary {
-    background-color: #fff;
-    color: #111;
-    padding: 12px 28px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background 0.3s, color 0.3s;
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background-color: #c5a059;
-    color: white;
-}
-
-/* 3. Sección de Productos / Colección */
-.products-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    margin: 50px 0 35px 0;
 }
 
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
-    text-align: center;
     color: #1a1a1a;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+}
+
+.section-divider {
+    width: 40px;
+    height: 3px;
+    background-color: #c5a059;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* 3. Contenedor de Productos en Cuadrícula */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-/* Tarjetas de productos */
+/* Tarjeta individual de cada zapatilla */
 .product-card {
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     border: 1px solid #eaeaea;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.card-image {
+/* Imagen de la tarjeta */
+.product-image {
     width: 100%;
-    height: 260px;
-    background-color: #f4f4f4;
-    overflow: hidden;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
+    height: 270px;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    background-color: #f2f2f2;
 }
 
-.product-card:hover .card-image img {
-    transform: scale(1.05);
-}
-
-.card-info {
-    padding: 20px;
+/* Información de la zapatilla */
+.product-info {
+    padding: 22px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.category {
+.product-category {
     font-size: 11px;
     color: #777;
     text-transform: uppercase;
@@ -198,15 +123,15 @@ body {
     font-weight: 600;
 }
 
-.card-info h3 {
+.product-title {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #111;
     margin-bottom: 20px;
 }
 
-/* Botón de WhatsApp dentro de cada tarjeta */
-.btn-card {
+/* Botón "Consultar por WhatsApp" dentro de la tarjeta */
+.whatsapp-btn {
     margin-top: auto;
     background-color: #111;
     color: white;
@@ -214,69 +139,37 @@ body {
     padding: 12px;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.5px;
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.btn-card:hover {
-    background-color: #c5a059;
+.whatsapp-btn:hover {
+    background-color: #333;
 }
 
-/* 4. Botón flotante de WhatsApp de la esquina */
-.whatsapp-btn {
+/* 4. Botón Flotante de WhatsApp (esquina inferior derecha) */
+.floating-whatsapp {
     position: fixed;
     bottom: 25px;
     right: 25px;
     background-color: #25d366;
     color: white;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     z-index: 1000;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-.whatsapp-btn:hover {
+.floating-whatsapp:hover {
     transform: scale(1.1);
-}
-
-.whatsapp-icon {
-    width: 30px;
-    height: 30px;
-    fill: white;
-}
-
-/* 5. Pie de página */
-footer {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-}
-
-.footer-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-footer .quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 16px;
-    color: #d1d1d1;
-    margin-bottom: 15px;
-}
-
-footer .copyright {
-    font-size: 12px;
-    color: #888;
-    letter-spacing: 0.5px;
 }
